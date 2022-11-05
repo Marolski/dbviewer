@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\EmployeeModel;
+use App\Models\Employee;
 
 class EmployeeController extends Controller
 {
-    public function getAllEmployee() {
-        $employees =DB::table('employee')->get();
-        return view('employees', compact('employees'));
-    }
+//    public function getAllEmployee() {
+//        $employees =DB::table('employee')->get();
+//        return view('employees', compact('employees'));
+//    }
     public function addEmployee(Request $req) {
-        $Employee = new EmployeeModel();
+        $Employee = new Employee();
         $Employee->Imie=$req->name;
         $Employee->Nazwisko=$req->surname;
         $Employee->Pesel=$req->userId;

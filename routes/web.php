@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/employees',[\App\Http\Controllers\EmployeeController::class,'getAllEmployee']) ->name('employees.getallemployees');
+//Route::get('/employees',[\App\Http\Controllers\EmployeeController::class,'getAllEmployee']) ->name('employees.getallemployees');
 Route::view('getEmployees', 'employees');
-Route::post('submitUser', 'EmployeeController@addEmployee');
+Route::post('submitUser', [\App\Http\Controllers\EmployeeController::class,'addEmployee']);

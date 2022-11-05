@@ -10,7 +10,7 @@
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Dodaj pracownika</h3>
 
             <form class="px-md-2" action="submitUser" method="post">
-
+                    @csrf
               <div class="form-outline mb-4">
                 <input type="text" id="form3Example1q" class="form-control" />
                 <label class="form-label" for="form3Example1q">Imię</label>
